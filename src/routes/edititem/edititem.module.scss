@@ -1,5 +1,11 @@
 @import '../../assets/styles/_config.scss';
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
 
 .edititem {
     padding: $container-padding;
+}
+
+h2 {
+    font-family: 'Overpass', sans-serif;
+    color: rgba(20, 20, 20, 0.705);
 }

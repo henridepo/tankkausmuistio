@@ -1,6 +1,5 @@
 @import '../../assets/styles/_config.scss';
 @import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
-@import "react-slideshow-image/dist/styles.css";
 
 .startup {
     max-width: 38rem;
@@ -9,13 +8,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
+    z-index: 100;
 }
 
 h1 {
+    padding-top: 175px;
     font-family: 'Allerta Stencil', sans-serif;
-    font-size: 35px;
+    font-size: 45px;
+    color: rgba(0, 0, 0, 0.733);
     text-shadow: 1px 1px #ccc;
+}
+
+h4 {
+  color: #385b7eb6;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
 }
 
 $particleSize: 10vmin;
@@ -62,4 +71,32 @@ $amount: 20;
     margin: 1rem;
 }
 
+.images {
+    padding: 5px;
+    align-items: center;
+    justify-content:space-evenly;
+    border:1px solid rgb(0, 0, 0);
+    width: 100%;
+    height: 100%;
+}
 
+img {
+    width: calc(45% + .49px);
+    opacity: 0.5;
+    border-radius: 20px;
+    padding: 15px;
+    z-index: 1000;
+    vertical-align:middle;
+}
+
+img:hover {
+        position:relative;
+        opacity: 0.9;
+        transform: scale(1.5);
+        border-radius: 20px;
+        z-index: 1;
+}
+
+p {
+    display: inline-block;
+  }

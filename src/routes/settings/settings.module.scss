@@ -6,12 +6,14 @@
 
 .settings h3 {
     margin-top: 0.5rem;
+    color: rgba(89, 128, 167, 0.829);
 }
 
 .settings_profile {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid $item-border;
 }
 
 .settings_user {
@@ -52,4 +54,8 @@
     border-radius: $form-input-radius;
     font-size: 1em;
     outline: none;
+}
+
+.delete {
+    margin-top: 0;
 }

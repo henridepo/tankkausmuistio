@@ -1,8 +1,10 @@
 @import '../../assets/styles/_config.scss';
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
 
 .form {
     display: flex;
     flex-direction: column;
+    font-family: 'Overpass', sans-serif;
 }
 
 .form_row {
@@ -17,12 +19,21 @@
     margin: $form-item-margin;
 }
 
-.form input, .form select {
+.form input {
     padding: $form-input-padding;
     border: 1px solid $form-input-border;
     border-radius: $form-input-radius;
     font-size: $form-input-fontsize;
     outline: none;
+}
+
+.form select {
+    padding: $form-input-padding;
+    border: 1px solid $form-input-border;
+    border-radius: $form-input-radius;
+    font-size: $form-input-fontsize;
+    outline: none;
+    background-color: rgba(138, 136, 136, 0.062);
 }
 
 .form label {

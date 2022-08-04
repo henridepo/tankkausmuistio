@@ -5,8 +5,9 @@
     scrollbar-width: thin;
     scrollbar-color: $scrollbar-thumb $scrollbar-track;
     -webkit-overflow-scrolling: touch;
-    background-image: linear-gradient( 109.6deg, rgba(97, 150, 230,0.1) 25%, rgba(97, 150, 230, 0.01) 91.1% );
+    background: url("~/src/assets/images/cansma.png") no-repeat center, linear-gradient( 105deg, rgba(97, 150, 230,0.1) 30%, rgba(97, 150, 230, 0.01) 91.1% );
     border-radius: 20px;
+    background-position: 40% 50%;
 }
 
 ::-webkit-scrollbar {

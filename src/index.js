@@ -6,21 +6,20 @@ import reportWebVitals from './reportWebVitals';
 import { FirebaseAppProvider, AuthCheck } from 'reactfire';
 import Startup from './components/startup';
 
+
 const firebaseConfig = {
 
-  apiKey: "AIzaSyD5FVm_icHi3EJRcTOfxOjrvMTq3ltzATM",
+  apiKey: "AIzaSyDJUlrJnm4yGCdzyNct5hlxas4Rn2st9B0",
 
-  authDomain: "kulukirjanpito-42e02.firebaseapp.com",
+  authDomain: "tankkausmuistio.firebaseapp.com",
 
-  projectId: "kulukirjanpito-42e02",
+  projectId: "tankkausmuistio",
 
-  storageBucket: "kulukirjanpito-42e02.appspot.com",
+  storageBucket: "tankkausmuistio.appspot.com",
 
-  messagingSenderId: "543783386182",
+  messagingSenderId: "210431346029",
 
-  appId: "1:543783386182:web:edf62403715afb5ac89e47",
-
-  measurementId: "G-GKCCT8VBSJ"
+  appId: "1:210431346029:web:2cfcf4f94d6a7bb7dc8664"
 
 };
 
@@ -35,13 +34,7 @@ ReactDOM.render(
   </FirebaseAppProvider>
 </React.StrictMode>, root
 );
-/*
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-  */
+
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals

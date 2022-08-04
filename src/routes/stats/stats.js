@@ -17,7 +17,7 @@ function Stats(props) {
     }
 
     const piedata = props.data.reduce(reducer, []);
-    const piecolors = randomColor({count: piedata.length, seed: "kulukirjanpito"});
+    const piecolors = randomColor({count: piedata.length, seed: "tankkausmuistio"});
 
 /*<ResponsiveContainer width={'100%'} heigth={360}>
 
@@ -25,7 +25,7 @@ function Stats(props) {
     return (
         <div className={styles.stats}>
 
-            <h2>Statsit</h2>
+            <h2>Statistiikat</h2>
             <h3>Tankkaukset aikajanalla</h3>
             <div style={{position: 'relative', width: '100%', paddingBottom: '360px'}}>
   <div
@@ -50,15 +50,16 @@ function Stats(props) {
                     <Label value="Summa" 
                             position="left"
                             angle={-90}
-                            style={{ textAnchor: "middle" }}/>
+                            style={{ textAnchor: "middle", fontSize: '1rem', fontFamily: 'Overpass', fill: 'gray' }}/>
                 </YAxis>
                 <Line dataKey="amount" name="kulut" unit="€" />
                 <Tooltip labelFormatter={value => new Date(value).toLocaleDateString("fi-FI")}/>
             </LineChart>
             </ResponsiveContainer>
-
+            <div className={styles.stats_row}></div>
+            <div>
+            </div>
             <h3>Kulut yhteensä ajoneuvoittain</h3>
-
             <ResponsiveContainer width={"100%"} height={360}>
             <PieChart>
                 <Pie data={piedata} dataKey="amount" nameKey="type">
@@ -69,7 +70,7 @@ function Stats(props) {
                 <Tooltip formatter={value => value + " €"} />
             </PieChart>
             </ResponsiveContainer>
-
+            <div className={styles.stats_row}></div>
         </div></div></div>
         
 );

@@ -13,8 +13,6 @@ import AddItem from '../../routes/additem';
 import EditItem from '../../routes/edititem';
 import Menu from '../menu';
 import { ButtonAppContainer } from '../../shared/uibuttons';
-// import testdata from '../../testdata.js'
-
 
 function App() {
 
@@ -29,11 +27,6 @@ const { data: itemCollection } = useFirestoreCollectionData(itemCollectionRef.or
 const typeCollectionRef = useFirestore().collection('user').doc(user.data.uid).collection('type');
 const { data: typeCollection } = useFirestoreCollectionData(typeCollectionRef.orderBy("type"), { initialData: []});
 
-//useEffect(() => {
-//  setData(testdata);
-//  setTypelist(["Auto", "Puhelin", "Sähkö", "Vero", "Vesi"]);
-//}, []);
-
 useEffect(() => {
   setData(itemCollection);
 }, [itemCollection]);
@@ -46,41 +39,14 @@ useEffect(() => {
 const handleItemSubmit = (newitem) => {
 
   itemCollectionRef.doc(newitem.id).set(newitem);
-  /*
-  let storeddata = data.slice();
-  const index = storeddata.findIndex(item => item.id === newitem.id);
-  if (index >= 0 ) {
-    storeddata[index] = newitem;
-  } else {
-    storeddata.push(newitem);
-  }
-
-  storeddata.sort( (a,b) => {
-      const aDate = new Date(a.paymentDate);
-      const bDate = new Date(b.paymentDate);
-      return bDate.getTime() - aDate.getTime();
-  } );
-
-  setData(storeddata);
-  */
 }
 
 const handleItemDelete = (id) => {
  itemCollectionRef.doc(id).delete();
- /* let storeddata = data.slice();
-  storeddata = storeddata.filter(item => item.id !== id);
-  setData(storeddata);
-  */
 }
 
 const handleTypeSubmit = (newtype) => {
 typeCollectionRef.doc().set({type: newtype});
-  /*
-    let storedtypelist = typelist.slice();
-    storedtypelist.push(newtype);
-    storedtypelist.sort();
-    setTypelist(storedtypelist);
-    */
 }
 
   return (

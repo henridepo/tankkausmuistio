@@ -1,9 +1,17 @@
 @import '../../assets/styles/_config.scss';
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
 
 .stats {
+    font-family: 'Varela Round', sans-serif;
     padding: $container-padding;
+    color: rgba(89, 128, 167, 0.829);
 }
 
-.stats h3 {
+h3 {
+    font-family: 'Overpass', sans-serif;
     margin-top: 0.5rem;
+}
+
+.stats_row {
+    padding: 25px;
 }

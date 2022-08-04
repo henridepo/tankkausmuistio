@@ -22,8 +22,8 @@ const initialState = props.data ? props.data : {
     amount: 0,
     litres: 0,
     paymentDate: new Date().toISOString().substring(0,10),
-    periodStart: "",
-    periodEnd: "",
+   // periodStart: "",
+   // periodEnd: "",
     receiver: ""
 };
 
@@ -97,14 +97,5 @@ const handleDelete = (event) => {
     </div>
  );   
 }
-                     /* <div className={styles.form_row}>
-                      <div>
-                          <label htmlFor="periodStart">Laskutuskauden alku</label>
-                          <input type="date" name="periodStart" onChange={handleChange} value={values.periodStart} />
-                      </div>
-                      <div>
-                          <label htmlFor="periodEnd">Laskutuskauden loppu</label>
-                          <input type="date" name="periodEnd" onChange={handleChange} value={values.periodEnd} />
-                      </div>
-                      </div>*/
+
 export default ItemForm;

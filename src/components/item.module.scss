@@ -4,6 +4,7 @@
     display: flex;
     border-bottom: 1px solid $item-border;
     color: $item-text;
+    font-family: $item-font-family;
 }
 
 .item_data {

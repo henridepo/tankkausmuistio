@@ -8,7 +8,7 @@ const locale = "fi-FI";
 const paymentDate = new Date(props.data.paymentDate).toLocaleDateString(locale);
 const numberFormat = new Intl.NumberFormat(locale, { style: 'currency', currency: 'EUR'});
 const amount = numberFormat.format(props.data.amount);
-const litres = props.data.litres +"l";
+const litres = props.data.litres +"L";
 
 let average;
 let period;
