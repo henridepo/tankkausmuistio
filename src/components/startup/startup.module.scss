@@ -1,0 +1,65 @@
+@import '../../assets/styles/_config.scss';
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap');
+@import "react-slideshow-image/dist/styles.css";
+
+.startup {
+    max-width: 38rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-family: 'Allerta Stencil', sans-serif;
+    font-size: 35px;
+    text-shadow: 1px 1px #ccc;
+}
+
+$particleSize: 10vmin;
+$animationDuration: 6s;
+$amount: 20;
+
+.startup span {
+  width: $particleSize;
+  height: $particleSize;
+  border-radius: $particleSize;
+  backface-visibility: hidden;
+  position: absolute;
+  animation-name: move;
+  animation-duration: $animationDuration;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  $colors: (
+    #385b7e,
+    #5ab8e4,
+    #acffcc
+  );
+  @for $i from 1 through $amount {
+    &:nth-child(#{$i}) {
+      color: nth($colors, random(length($colors)));
+      top: random(50) * 0.5%;
+      left: random(50) * 0.3%;
+      animation-duration: (random($animationDuration * 10) / 10) * 1s + 10s;
+      animation-delay: random(($animationDuration + 10s) * 10) / 10 * -1s;
+      transform-origin: (random(50) - 25) * 1vw (random(50) - 25) * 1vh;
+      $blurRadius: (random() + 0.5) * $particleSize * 0.5;
+      $x: if(random() > 0.5, -1, 1);
+      box-shadow: ($particleSize * 2 * $x) 0 $blurRadius currentColor;
+    }
+  }
+}
+
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+
+}
+.startup div {
+    margin: 1rem;
+}
+
+

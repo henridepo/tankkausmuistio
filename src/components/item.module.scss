@@ -1,0 +1,42 @@
+@import '/src/assets/styles/_config.scss';
+
+.item {
+    display: flex;
+    border-bottom: 1px solid $item-border;
+    color: $item-text;
+}
+
+.item_data {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: $item-padding;
+}
+
+.item_amount, .item_timespan, .item_average {
+    text-align: right;
+}
+
+.item_type, .item_amount {
+    font-weight: bold;
+    color: $item-text-strong;
+}
+
+.item_edit {
+    max-width: $item-edit-width;
+    min-width: $item-edit-width;
+    background-color: $item-edit-background;
+    color: $item-edit-text;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.item_edit a {
+    color: $item-edit-text;
+}
+
+.item:hover .item_edit {
+    display: flex;
+}
