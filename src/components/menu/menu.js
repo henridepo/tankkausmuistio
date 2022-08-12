@@ -24,7 +24,5 @@ function Menu() {
     </div>
     );
 }
-//  onMouseOver={({target})=>target.style.color='black'} 
-//  onMouseOut={(target)=>target.style.color='white'}>
 
 export default Menu;

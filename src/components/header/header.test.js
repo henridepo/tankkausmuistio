@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import Header from './header';
 
-test('renders learn react link', () => {
+test('renders header with text', () => {
     render(<Header />);
-    const text = screen.getByText(/Kulukirjanpito/i);
+    const text = screen.getByText(/Tankkausmuistio/i);
     expect(text).toBeInTheDocument();
 });

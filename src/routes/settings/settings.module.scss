@@ -42,6 +42,15 @@
     background-color: rgba(138, 136, 136, 0.08);
 }
 
+.settings_types select {
+    padding: $form-input-padding;
+    border: 1px solid $form-input-border;
+    border-radius: $form-input-radius;
+    font-size: $form-input-fontsize;
+    outline: none;
+    background-color: rgba(138, 136, 136, 0.062);
+}
+
 .typeform {
     display: flex;
     margin-top: 0.5rem;
@@ -56,6 +65,40 @@
     outline: none;
 }
 
+.type_row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $item-border;
+    margin-top: 2.5rem;
+    color: rgba(89, 128, 167, 0.829);
+}
+
 .delete {
     margin-top: 0;
+}
+
+.icons img {
+    position: relative;
+    height: 45px;
+    width: 160px;
+    border-radius: 25px;
+    margin-left: 365px;
+}
+
+.icons img:hover {
+    position:relative;
+    opacity: 0.9;
+    transform: scale(1.2);
+    border-radius: 25px;
+    z-index: 1;
+}
+
+.text_icons {
+    position: relative;
+    margin: 5px;
+    display: flex;
+    justify-content: right;
+    font-weight: bold;
+    color: rgba(89, 128, 167, 0.829);
 }

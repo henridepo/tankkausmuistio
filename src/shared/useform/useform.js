@@ -5,7 +5,7 @@ const useForm = (callback, initialState={}, resetOnSubmit=true) => {
     //Esitellään useState-hook, johon käyttäjän lomakkeelle syöttämä tieto tallennetaan.
     const [values, setValues] = useState(initialState);
 
-    //Submit-käsittelijä, joka estää oletustoiminnan ja kutsuu määriteltyä callback-fukntiota.
+    //Submit-käsittelijä, joka estää oletustoiminnan ja kutsuu määriteltyä callback-funktiota.
 const handleSubmit = (event) => {
     if (event) {
         event.preventDefault();

@@ -5,9 +5,13 @@ import { Link } from 'react-router-dom';
 function Item(props) {
 
 const locale = "fi-FI";
+//Maksupäivän muotoilu vakiona props datalta tulleeseen arvoon tuoden toiminnallisuus ja lokaali-asetus
 const paymentDate = new Date(props.data.paymentDate).toLocaleDateString(locale);
+//Numeroformaatin vakiolle international muutoksen tuominen ja arvojen asettaminen sekä muotoilu
 const numberFormat = new Intl.NumberFormat(locale, { style: 'currency', currency: 'EUR'});
+//Annetaan amount arvolle numberFormat vakion muotoilu ja tuodaan propsista datan arvo
 const amount = numberFormat.format(props.data.amount);
+//Litrojen vakion propsien datan tuominen ja muotoilu
 const litres = props.data.litres +"L";
 
 let average;

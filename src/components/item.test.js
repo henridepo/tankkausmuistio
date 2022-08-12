@@ -6,16 +6,15 @@ test('renders item from props data', () => {
     render(<Router>
             <Item data={{
             id: "1234",
-            type: "Sähkö",
-            receiver: "Helen",
-            amount: 89,
+            type: "Oma auto",
+            receiver: "ABC",
+            litres: 25,
+            amount: 59,
             paymentDate: "2022-01-06",
-            periodStart: "",
-            periodEnd: ""
           }} />
           </Router>);
-    const type = screen.getByText(/Sähkö/i);
+    const type = screen.getByText(/Oma auto/i);
     expect(type).toBeInTheDocument();
-    const receiver = screen.getByText(/Helen/i);
+    const receiver = screen.getByText(/ABC/i);
     expect(receiver).toBeInTheDocument();
 });

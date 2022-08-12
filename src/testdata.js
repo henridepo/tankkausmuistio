@@ -1,48 +1,35 @@
 const data = [
 {
     id:             "1",
-    type:           "Sähkö",
-    amount:         89.75,
-    paymentDate:    "2020-11-19",
-    periodStart:    "2020-10-01",
-    periodEnd:      "2020-10-31",
-    receiver:       "Helsingin energia"
+    type:           "Oma auto",
+    amount:         35,
+    litres:         15,
+    paymentDate:      "2021-10-31",
+    receiver:       "ABC"
 },
 {
     id:             "2",
-    type:           "Puhelin",
-    amount:         26.90,
-    paymentDate:    "2020-11-17",
-    periodStart:    "",
-    periodEnd:      "",
-    receiver:       "Elisa"
+    type:           "Työauto",
+    amount:         65,
+    litres:         30,
+    paymentDate:      "2021-10-31",
+    receiver:       "Neste"
 },
 {
     id:             "3",
-    type:           "Vesi",
-    amount:         352.00,
-    paymentDate:    "2020-10-29",
-    periodStart:    "2020-06-01",
-    periodEnd:      "2020-08-31",
-    receiver:       "Sastamalan vesilaitos"
+    type:           "Isän Polo",
+    amount:         50,
+    litres:         25,
+    paymentDate:      "2021-10-31",
+    receiver:       "ST1"
 },
 {
     id:             "4",
-    type:           "Puhelin",
-    amount:         26.90,
-    paymentDate:    "2020-10-16",
-    periodStart:    "",
-    periodEnd:      "",
-    receiver:       "Elisa"
-},
-{
-    id:             "5",
-    type:           "Vero",
-    amount:         178.34,
-    paymentDate:    "2020-09-19",
-    periodStart:    "2020-01-01",
-    periodEnd:      "2020-12-31",
-    receiver:       "Verovirasto"
+    type:           "Äidin Renault",
+    amount:         25,
+    litres:         10,
+    paymentDate:      "2021-10-31",
+    receiver:       "Neste"
 },
 ];
 
